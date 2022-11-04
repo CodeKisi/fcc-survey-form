@@ -16,16 +16,17 @@
     <form action="" id="survey-form">
         <fieldset>
         <label for="first-name" class="block"> First Name:
-            <input type="text" id="first-name" placeholder="Enter First Name" required/></label>
+            <input type="text" name="first-name" id="first-name" placeholder="Enter First Name" required/></label>
         <label for="last-name" class="block"> Last Name:
-            <input type="text" id="last-name" placeholder="Enter Last Name"/></label>
-        <label for="Email" class="block"> Email:
+            <input type="text" name="last-name" id="last-name" placeholder="Enter Last Name"/></label>
+        <label for="name" id="name-label" class="block"> Nickname/Alias:
+            <input type="text" name="name" id="name" placeholder="Enter Nickname/Alias" required/></label>
+        <label for="email" id="email-label" class="block"> Email:
             <input type="email" name="email" id="email" placeholder="Enter Email" required/></label>
         <label for="age" class="block">Age:
-            <input type="number" name="age" id="age" placeholder="Enter Age" required>
-        </label>
+            <input type="number" name="age" id="age" min="13" max="120" placeholder="Enter Age" required></label>
         <label for="role">Select which describes your current role:
-        <select name="role" id="role">
+        <select name="role" id="dropdown">
             <option value="" disabled>(select one)</option>
             <option value="1">Student</option>
             <option value="2">Professional</option>
@@ -40,36 +41,45 @@
             <div class="gender">
                 <h3>Gender:</h3>
                 <label for="male">
-                    <input type="radio" name="gender" id="male"> Male
+                    <input type="radio" name="gender" id="male" value="male"> Male
                 </label>
                 <label for="female">
-                    <input type="radio" name="gender" id="female"> Female
+                    <input type="radio" name="gender" id="female"value="female"> Female
                 </label>
                 <label for="others">
-                    <input type="radio" name="gender" id="others"> Others
+                    <input type="radio" name="gender" id="others" value="others"> Others
                 </label>
             </div>
-         </fieldset>
-
-        <fieldset>  
+ 
             <div class="civil-status">
                 <h3>Status:</h3>
                 <label for="single"> 
-                    <input type="radio" id="single" name="civil-status"> Single</label>
+                    <input type="radio" id="single" name="civil-status" value="single"> Single</label>
                 <label for="in-a-relationship"> 
-                    <input type="radio" id="in-a-relationship" name="civil-status"> In a relationship</label>
+                    <input type="radio" id="in-a-relationship" name="civil-status" value="in-a-relationship"> In a relationship</label>
                 <label for="married"> 
-                    <input type="radio" id="married" name="civil-status"> Married</label>
+                    <input type="radio" id="married" name="civil-status" value="married"> Married</label>
                 <label for="others"> 
-                    <input type="radio" id="others" name="civil-status"> Others</label>
+                    <input type="radio" id="others" name="civil-status" value="others"> Others</label>
+                <h3>Apporximate Savings:</h3>
+                <label for="number" id="number-label"> <h3>Approximate Savings:</h3>
+                    <input type="number" name="savings" min="0" max="999999999999999999" id="number" placeholder="Enter Amount" required></label>
             </div>
         </fieldset>
         <fieldset>
-            <label for=""><input type="checkbox"></label>
+            <h3>Programming Languages</h3>
+            <label for="python"><input type="checkbox" name="python" id="python" value="python"> Python</label>
+            <label for="go"><input type="checkbox" name="go" id="go" value="go"> Go</label>
+            <label for="kotlin"><input type="checkbox" name="kotlin" id="kotlin" value="kotlin"> Kotlin</label>
+            <label for="javascript"><input type="checkbox" name="javascript" id="javascript" value="javascript"> Javascript</label>
+            <label for="java"><input type="checkbox" name="java" id="java" value="java"> Java</label>
+            <label for="r"><input type="checkbox" name="r" id="r" value="r"> R</label>
+            <label for="c#"><input type="checkbox" name="c#" id="c#" value="c#"> C#</label>
+            <label for="c++"><input type="checkbox" name="c++" id="c++" value="c++"> C++ </label>
         </fieldset>
         <fieldset>
             <h3>Biography</h3>
-            <textarea name="bio" id="bio" cols="50" rows="5" placeholder="I love coding on rainy days."></textarea>
+            <textarea name="bio" id="bio" cols="80" rows="5" placeholder="I love coding on rainy days."></textarea>
         </fieldset>
 
         <input type="submit" name="Submit" value="Submit" id="submit">

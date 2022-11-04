@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
 
-body {
+body, textarea, select {
     background-color:#0a0a23;
     color:#f5f6f7;
     font-family: "Roboto Mono";
@@ -17,10 +17,18 @@ form {
 
 fieldset {
     border: none;
-    border-bottom: 2px solid  #3b3b4f;
-    padding: 2rem;
-}
+    border-bottom: 3px solid  #3b3b4f;
+    padding-bottom: 2rem;
 
+}
+input[type="text"], 
+input[type="number"], 
+input[type="email"] {
+    width: 100%;
+    margin:10px 0 10px 0;
+    height:2em;
+    font-family: "Roboto Mono";
+}
 input[name="Submit"] {
     margin: 1em auto;
     text-align: center;
@@ -28,7 +36,20 @@ input[name="Submit"] {
     padding: 10px 10px;
     text-align: center;
     display: block;
+    background-color:#3b3b4f;
+    color: #ffffff;
+    font-size:1rem;
 }
 .block {
     display: block;
+}
+fieldset:last-of-type {
+    border: none;
+}
+
+textarea {
+    
+}
+#number {
+    margin-top: 0;
 }
